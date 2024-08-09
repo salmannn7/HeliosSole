@@ -1,8 +1,12 @@
 <!-- 404.html -->
 <script type="text/javascript">
-    // Redirect all 404s to index.html
-    if (window.location.pathname !== "/HeliosSole/") {
-      window.location.replace("/HeliosSole/");
+    // Check if the current path starts with "/HeliosSole/"
+    if (window.location.pathname.startsWith('/HeliosSole/')) {
+      // Redirect to the root path
+      window.location.replace('/HeliosSole/');
+    } else {
+      // Redirect to the root of the site (useful for other cases)
+      window.location.replace('/');
     }
   </script>
   

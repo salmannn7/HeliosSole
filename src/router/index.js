@@ -21,7 +21,7 @@ const ifAuthenticated = (to, from, next) => {
         next() // Continues with the navigation
         return
     }
-    next('/Login') // Redirects to the login page if not authenticated
+    next('/HeliosSole/Login') // Redirects to the login page if not authenticated
 }
 
 // Defines routes for the application
