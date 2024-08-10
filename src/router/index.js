@@ -1,5 +1,5 @@
 // Imports the Vue Router functions
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 // Imports the Vue components for routing
 import Home from "../views/pages/Home.vue"
@@ -40,7 +40,7 @@ const routes = [
 
 // Defines routes for the application
 const router = createRouter({
-    history: createWebHistory('/HeliosSole/'), // Creates web history for router
+    history: createWebHashHistory(), // Creates web history for router
     routes, // Passes defined routes to router instance
 })
 
