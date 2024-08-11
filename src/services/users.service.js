@@ -1,7 +1,7 @@
 
 // Function to log in a user
 const login = (email, password) => {
-    return fetch("http://localhost:3000/login", {
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -34,7 +34,7 @@ const login = (email, password) => {
 
 // Function to log out a user
 const logout = () => {
-    return fetch("http://localhost:3000/logout",
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/logout",
         {
             method: "POST",
             headers: {
@@ -63,7 +63,7 @@ const logout = () => {
 
 // Function to get a user by user ID
 const getOne = (id) => {
-    return fetch("http://localhost:3000/users/" + id)
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/users/" + id)
         .then((response) => {
             if (response.status === 200) {
                 return response.json();
@@ -82,7 +82,7 @@ const getOne = (id) => {
 
 // Function to get all users
 const getAll = () => {
-    return fetch("http://localhost:3000/users")
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/users")
         .then((response) => {
             if (response.status === 200) {
                 return response.json();
@@ -101,7 +101,7 @@ const getAll = () => {
 
 // Function to register a new user
 const create = (firstname, lastname, birthdate, gender, email, password) => {
-    return fetch("http://localhost:3000/users",
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/users",
 
         {
             method: "POST",
@@ -147,7 +147,7 @@ const edit = (id, first_name, last_name, password) => {
         requestBody.password = password;
     }
 
-    return fetch("http://localhost:3000/users/" + id, {
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/users/" + id, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody)
@@ -177,7 +177,7 @@ const edit = (id, first_name, last_name, password) => {
 // Function to send verification email - DOESN'T WORK
 /*
 const sendVerificationEmail = (email, subject, message) => {
-    return fetch("http://localhost:3000/send-verification-email", {
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/send-verification-email", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

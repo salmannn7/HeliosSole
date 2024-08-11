@@ -1,7 +1,7 @@
 
 // Function to get all descriptions of the products
 const getAll = () => {
-    return fetch("http://localhost:3000/favourites")
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/favourites")
         .then((response) => {
             if (response.status === 200) {
                 return response.json();
@@ -20,7 +20,7 @@ const getAll = () => {
 
 // Function to get the user's favourites based on the user's ID
 const getUser = (id) => {
-    return fetch("http://localhost:3000/favourites/users/" + id)
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/favourites/users/" + id)
         .then((response) => {
             if (response.status === 200) {
                 return response.json();
@@ -39,7 +39,7 @@ const getUser = (id) => {
 
 // Function to get a user's favourite based on it's favourite ID
 const getOne = (id) => {
-    return fetch("http://localhost:3000/favourites/" + id)
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/favourites/" + id)
         .then((response) => {
             if (response.status === 200) {
                 return response.json();
@@ -58,7 +58,7 @@ const getOne = (id) => {
 
 // Function to favourite a product
 const create = (product_id, user_id) => {
-    return fetch("http://localhost:3000/favourites", {
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/favourites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -88,7 +88,7 @@ const create = (product_id, user_id) => {
 
 // Function to unfavourite a product
 const deleteFavourite = (id) => {
-    return fetch("http://localhost:3000/favourites/" + id, {
+    return fetch("https://8f146194-0c00-45d2-aaed-d3c94395bd43-00-1h6pryaiftp3x.spock.replit.dev/favourites/" + id, {
         method: "DELETE",
     })
         .then((response) => {
